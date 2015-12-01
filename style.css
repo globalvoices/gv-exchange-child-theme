@@ -1,0 +1,90 @@
+/*
+Theme Name: GV Lenguas Child Theme
+Theme URI: http://rising.globalvoicesonline.org/
+Description: Child theme for the generic gv-project-theme for GV Exchange project
+Version: 0.1
+Author: Jeremy Clarke
+Author URI: http://globalvoicesonline.org/
+Template: gv-project-theme
+
+*/
+
+@import url("../gv-project-theme/style.css");
+
+
+
+.site-title {
+	width: 240px;
+    max-width: 240px;
+}
+
+.header-mission-statement {
+	float:right;
+}
+
+#MEDIUM-GREY-TEXT,
+ .header-nav-bar-container .header-nav-bar a,
+ .header-nav-bar-container .header-nav-bar a:hover,
+ .header-nav-bar-container .header-nav-bar a:active,
+.medium-grey-text {
+	 color: #666;
+ }
+#LIGHT-GREY-BACKGROUND,
+.header-container,
+.header-nav-bar-container,
+.light-grey-background {
+	background-color: #eee;
+}
+#LIGHT-GREY-HIGHLIGHT-BORDER,
+.header-menu li,
+.header-menu-container input,
+.header-tools .menu-toggle,
+.medium-grey-hightlight-border {
+	border-color: #ddd; 
+}
+#DARKER-GREY-BACKGROUND,
+.header-container .site-search input[type='submit'],
+.darker-grey-background {
+	background-color: #888; /*Dodger blue highlight*/
+}
+#DARKER-GREY-OUTLINE,
+.header-container .site-search input,
+.darker-grey-outline {
+	outline: 1px solid #888;
+}
+
+
+@media
+/*only screen BIGGER THAN 1008px {*/
+only screen and (min-width: 1008px) {
+
+}
+@media
+/*only screen and (max-width: 960px) {*/
+only screen and (max-width: 1008px) {
+	.site-title {
+
+	}	
+}
+/*Anything smaller than 720px*/
+@media
+only screen and (max-width: 720px) {	
+	.site-title {
+		max-width: 200px;
+	}
+}
+@media
+only screen and (max-width: 552px) {
+	.site-title {
+		max-width: 160px;
+	}
+.site-menu > .site-subscribe-icons {display:none;} 
+}
+/*Anything smaller than 480 - iPhone landscape*/
+@media
+only screen and (max-width: 481px) {	
+}
+/*Anything smaller than 360: iPhone portrait */
+@media
+only screen and (max-width: 360px) {		
+}
