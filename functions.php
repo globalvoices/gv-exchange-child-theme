@@ -99,6 +99,20 @@ if (isset($gv) AND is_object($gv)) :
 //	add_filter('gv_og_image', 'gvadvocacy_theme_gv_og_image');
 	
 	/**
+	 * Filter gv_post_archive_hide_dates to hide them on hoempage
+	 * @param type $limit
+	 * @param type $args
+	 * @return int
+	 */
+	function ex_gv_post_archive_hide_dates($hide_dates) {
+		if (is_home() AND !is_paged())
+			return true;
+		
+		return $hide_dates;
+	}
+	add_filter('gv_post_archive_hide_dates', 'ex_gv_post_archive_hide_dates', 10);
+	
+	/**
 	 * Define the hierarchical structure of the taxonomy by its parents
 	 */
 //	$gv->taxonomy_outline = array(
