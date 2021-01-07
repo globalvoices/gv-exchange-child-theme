@@ -19,62 +19,6 @@ if (isset($gv) AND is_object($gv)) :
 	if (!defined('GV_LINGUA'))
 		define('GV_LINGUA',  FALSE);
 	
-	/**
-	 * Register Lenguas 2015 microgrants questions
-	 * 
-	 * Should only apply to posts in lenguas-2015 category, so it should be fine to leave it here indefinitely
-	 */
-	
-	/**
-	 * Define an image to show in the header.
-	 * Project theme generic has none, so it will use site title
-	 */
-//	$gv->settings['header_img'] = get_stylesheet_directory_uri() . '/RisingVoices-microgrants-amazonia-600.png';	
-	
-
-
-		/**
-		 * Register "public taxonomies" for gv_taxonomies system to display automatically on posts
-		 */
-		// Unregister defaults as they aren't useful for this site
-//		gv_unregister_public_taxonomy('category');
-//		gv_unregister_public_taxonomy('post_tag');	
-		
-		/**
-		 * "Regions" taxonomy based on parentless members of gv_geo
-		 */
-//		gv_register_public_taxonomy('gv_geo', array(
-//			'subtaxonomy_slug' => 'region',
-//			'parent' => 'none',
-//			'labels' => array(
-//				'name' => _lingua('regions'), 
-//				'singular_name' => 'Region',
-//			),
-//		));
-		
-		/**
-		 * "Countries" taxonomy based on parentless members of gv_geo
-		 */
-//		gv_register_public_taxonomy('gv_geo', array(
-//			'subtaxonomy_slug' => 'country',
-//			'grandparent' => 'none',
-//			'labels' => array(
-//				'name' => _lingua('countries'), 
-//				'singular_name' => 'country',
-//			),			
-//		));
-
-	
-	/**
-	 * Filter the apple touch icon to be a customized logo
-	 * 
-	 * @param string $icon Default icon
-	 * @return string desired icon
-	 */
-//	function gvadvocacy_theme_gv_apple_touch_icon($icon) {
-//		return gv_get_dir('theme_images') ."gv-advocacy-apple-touch-icon-precomposed-300.png";
-//	}
-//	add_filter('gv_apple_touch_icon', 'gvadvocacy_theme_gv_apple_touch_icon');
 
 	/**
 	 * Filter the og:image (facebook/g+) default icon to be an RV logo
@@ -86,17 +30,6 @@ if (isset($gv) AND is_object($gv)) :
 		return gv_get_dir('theme_images') ."gv-exchange-logo-fb-1200x631.png";
 	}
 	add_filter('gv_og_image_default', 'gvexchange_theme_gv_og_image_default');
-	
-	/**
-	 * Filter ALL CASES OF og:image (facebook/g+) icon to be an RV logo
-	 * 
-	 * @param string $icon Default icon
-	 * @return string desired icon
-	 */
-//	function gvadvocacy_theme_gv_og_image($icon) {
-//		return gv_get_dir('theme_images') ."rv-logo-square-600.png";
-//	}
-//	add_filter('gv_og_image', 'gvadvocacy_theme_gv_og_image');
 	
 	/**
 	 * Filter gv_post_archive_hide_dates to hide them on hoempage
@@ -111,28 +44,8 @@ if (isset($gv) AND is_object($gv)) :
 		return $hide_dates;
 	}
 	add_filter('gv_post_archive_hide_dates', 'ex_gv_post_archive_hide_dates', 10);
-	
-	/**
-	 * Define the hierarchical structure of the taxonomy by its parents
-	 */
-//	$gv->taxonomy_outline = array(
-//		'countries' => 1,
-//		'topics' => 1,
-//		'special' => 1,
-//		'type' => 1,
-//	);
 
 	/**
-	 * Define Categories to be inserted into post data before returning content for translation during fetch
-	 * @see gv_lingua::reply_to_ping()
-	 */
-//	$gv->lingua_site_categories[] = 'gv-advocacy';
-
-	/**
-	 * Set a custom site description using a lingua string. To be used in social media sharing etc.
-	 */
-//	$gv->site_description = "A project of Global Voices Online, we seek to build a global anti-censorship network of bloggers and online activists dedicated to protecting freedom of expression and free access to information online.";
-		/**
 	 * Geo Mashup maps options partial_overrides
 	 */
 	if (!isset($gv->option_overrides['partial_overrides'])) :
@@ -214,21 +127,6 @@ if (isset($gv) AND is_object($gv)) :
 			"status" => 'featured',
 			),
 	);
-	
-	/**
-	 * Filter gv_post_archive_hide_dates to hide them on hoempage
-	 * @param type $limit
-	 * @param type $args
-	 * @return int
-	 */
-//	function lenguas_gv_post_archive_hide_dates($hide_dates) {
-//		if (is_home() AND !is_paged())
-//			return true;
-//		
-//		return $hide_dates;
-//	}
-//	add_filter('gv_post_archive_hide_dates', 'lenguas_gv_post_archive_hide_dates', 10);
-		
 	
 endif; // is_object($gv)
 
