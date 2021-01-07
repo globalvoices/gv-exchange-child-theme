@@ -1,17 +1,13 @@
 /*
 Theme Name: GV EXCHANGE Child Theme
-Theme URI: http://rising.globalvoicesonline.org/
+Theme URI: http://rising.globalvoices.org/exchange
 Description: Child theme for the generic gv-project-theme for GV Exchange project
 Version: 0.1
-Author: Jeremy Clarke
-Author URI: http://globalvoicesonline.org/
-Template: gv-project-theme
+Author: Jer Clarke
+Author URI: http://globalvoices.org/
+Template: gv-theme
 
 */
-
-@import url("../gv-project-theme/style.css");
-
-
 
 .site-title {
 	width: 240px;
