@@ -14,14 +14,10 @@ Template: gv-theme
     max-width: 240px;
 }
 
-.header-mission-statement {
-	float:right;
-}
-
 #MEDIUM-GREY-TEXT,
  .header-nav-bar-container .header-nav-bar a,
  .header-nav-bar-container .header-nav-bar a:hover,
- .header-nav-bar-container .header-nav-bar a:active,
+ .header-nav-bar-container .header-nav-bar a:current-menu-item,
 .medium-grey-text {
 	 color: #666;
  }
@@ -32,23 +28,10 @@ Template: gv-theme
 	background-color: #eee;
 }
 #LIGHT-GREY-HIGHLIGHT-BORDER,
-.header-menu li,
-.header-menu-container input,
-.header-tools .menu-toggle,
+.header-nav-bar li,
 .medium-grey-hightlight-border {
 	border-color: #ddd; 
 }
-#DARKER-GREY-BACKGROUND,
-.header-container .site-search input[type='submit'],
-.darker-grey-background {
-	background-color: #888; /*Dodger blue highlight*/
-}
-#DARKER-GREY-OUTLINE,
-.header-container .site-search input,
-.darker-grey-outline {
-	outline: 1px solid #888;
-}
-
 
 @media
 /*only screen BIGGER THAN 1008px {*/
@@ -74,7 +57,6 @@ only screen and (max-width: 552px) {
 	.site-title {
 		max-width: 160px;
 	}
-.site-menu > .site-subscribe-icons {display:none;} 
 }
 /*Anything smaller than 480 - iPhone landscape*/
 @media
